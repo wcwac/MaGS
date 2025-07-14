@@ -1,0 +1,86 @@
+dataset:
+  eval: true
+  data_device: cuda
+  test_per_iter: 1000
+  save_per_iter: 5000
+  render_per_iter: 5000
+  white_background: false
+  quiet: false
+
+model:
+  sh_degree: 3
+
+optim:
+  random_bg: false
+  iterations: 40000
+  batch_size: 1
+  warm_up: 1000
+
+  optim_uvw:
+    lr: 0.00016
+    scheduler_args:
+      lr_init: 0.00016
+      lr_final: 0.0000016
+      lr_delay_mult: 0.1
+      lr_max_steps: ${optim.iterations}
+  optim_features:
+    lr: 0.0025
+  optim_opacity:
+    lr: 0.05
+  optim_scaling:
+    lr: 0.005
+  optim_rotation:
+    lr: 0.001
+  optim_mesh_feat:
+    lr: 0.001
+    
+  densify_from_iter: 100
+  densification_interval: 100
+  densify_until_iter: 15000
+  opacity_reset_start_iter: 300
+  opacity_reset_interval: 3000
+  
+  size_threshold: 20
+  densify_grad_threshold: 0.0002
+  min_opacity: 0.005
+  max_n_gauss: 150000
+  
+  offset_start_iter: 400
+  
+  lambda_ssim: 0.2
+  lambda_perceptual: 0.05
+  lambda_scaling: 1.0
+
+  spatial_lr_scale: 5
+
+  percent_dense: 0.01
+
+pipe:
+  convert_SHs_python: False
+  compute_cov3D_python: False
+  debug: False
+
+
+loss:
+  lambda_ssim: 0.2
+
+
+deform:
+  lr_init: 0.00024
+  lr_final: 0.000024
+  lr_delay_mult: 0.1
+  lr_max_steps: ${optim.iterations}
+  D: 8
+  W: 256
+  input_ch: 3
+  output_ch: 59
+  is_blender: True
+  multires: 10
+  pred_opacity: False
+  pred_color: True
+  max_d_scale: -1
+  pose_embed_dim: 32
+  uvw_deform_D: 8
+  uvw_deform_W: 256
+  mesh_deform_D: 8
+  mesh_deform_W: 256

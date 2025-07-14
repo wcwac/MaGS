@@ -1,0 +1,14 @@
+dataset:
+  name: broom
+  type: Nerfies
+  extension: .png
+  source_path: /hdd/msj/dataset/vrig/broom/
+  mesh_path: /hdd/msj/dataset/vrig/broom/mesh.ply
+  mesh_alpha: 100
+  resolution: 2
+  nerfies_type: vrig
+model:
+  model_path: /hdd2/msj/outputs/broom
+optim:
+  batch_size: 2
+  opacity_reset_interval: 30000

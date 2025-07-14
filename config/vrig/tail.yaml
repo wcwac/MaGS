@@ -1,0 +1,14 @@
+dataset:
+  name: tail
+  type: Nerfies
+  extension: .png
+  source_path: /hdd/msj/dataset/vrig/tail/
+  mesh_path: /hdd/msj/dataset/vrig/tail/mesh.ply
+  mesh_alpha: 20
+  resolution: 2
+  nerfies_type: vrig
+model:
+  model_path: /hdd2/msj/outputs/tail
+optim:
+  batch_size: 2
+  opacity_reset_interval: 30000

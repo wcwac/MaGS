@@ -1,0 +1,14 @@
+dataset:
+  name: oven-mitts
+  type: Nerfies
+  extension: .png
+  source_path: /hdd/msj/dataset/interp/oven-mitts
+  mesh_path: /hdd/msj/dataset/interp/oven-mitts/mesh.ply
+  mesh_alpha: 50
+  resolution: 2
+  nerfies_type: interp
+model:
+  model_path: /hdd2/msj/outputs/oven-mitts
+optim:
+  batch_size: 2
+  opacity_reset_interval: 30000

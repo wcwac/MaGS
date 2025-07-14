@@ -1,0 +1,13 @@
+dataset:
+  name: beagle
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/dg-mesh/beagle/
+  mesh_path: /hdd/msj/dataset/dg-mesh/beagle/mesh.ply
+  mesh_alpha: 20
+  resolution: 2
+model:
+  model_path: /hdd2/msj/outputs/beagle
+optim:
+  batch_size: 2
+  opacity_reset_interval: 3000

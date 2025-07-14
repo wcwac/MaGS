@@ -1,0 +1,12 @@
+dataset:
+  name: mutant
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/mutant/
+  mesh_path: /hdd/msj/dataset/mutant/mesh.ply
+  mesh_alpha: 40
+  resolution: 2
+model:
+  model_path: /hdd2/msj/outputs/mutant
+optim:
+  batch_size: 2

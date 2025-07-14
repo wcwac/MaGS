@@ -1,0 +1,13 @@
+dataset:
+  name: girlwalk
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/dg-mesh/girlwalk/
+  mesh_path: /hdd/msj/dataset/dg-mesh/girlwalk/mesh.ply
+  mesh_alpha: 100
+  resolution: 2
+model:
+  model_path: /hdd2/msj/outputs/girlwalk
+optim:
+  batch_size: 5
+  opacity_reset_interval: 300000

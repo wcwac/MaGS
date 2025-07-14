@@ -1,0 +1,13 @@
+dataset:
+  name: female-3-casual
+  type: InstantAvatar
+  extension: .png
+  source_path: /hdd/msj/dataset/peoplesnapshot/female-3-casual/
+  mesh_path: /hdd/msj/dataset/peoplesnapshot/female-3-casual/mesh.ply
+  mesh_alpha: 20
+  resolution: 1
+model:
+  model_path: /hdd2/msj/outputs/female-3-casual
+optim:
+  batch_size: 5
+  opacity_reset_interval: 300000

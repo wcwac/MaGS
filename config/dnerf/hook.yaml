@@ -1,0 +1,13 @@
+dataset:
+  name: hook
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/hook/
+  mesh_path: /hdd/msj/dataset/hook/mesh.ply
+  mesh_alpha: 100
+  resolution: 2
+    white_background: false
+model:
+  model_path: /hdd2/msj/outputs/hook
+optim:
+  batch_size: 2

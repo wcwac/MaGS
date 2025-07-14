@@ -1,0 +1,15 @@
+dataset:
+  name: vrig-3dprinter
+  type: Nerfies
+  extension: .png
+  source_path: /hdd/msj/dataset/vrig/vrig-3dprinter/
+  mesh_path: /hdd/msj/dataset/vrig/vrig-3dprinter/mesh.ply
+  mesh_alpha: 20
+  resolution: 2
+  nerfies_type: vrig
+  test_per_iter: 5000
+model:
+  model_path: /hdd2/msj/outputs/vrig-3dprinter
+optim:
+  batch_size: 2
+  opacity_reset_interval: 30000

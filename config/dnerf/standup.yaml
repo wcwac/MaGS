@@ -1,0 +1,12 @@
+dataset:
+  name: standup
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/standup/
+  mesh_path: /hdd/msj/dataset/standup/mesh.ply
+  mesh_alpha: 100
+  resolution: 2
+model:
+  model_path: /hdd2/msj/outputs/standup
+optim:
+  batch_size: 2

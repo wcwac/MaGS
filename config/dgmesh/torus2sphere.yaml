@@ -1,0 +1,13 @@
+dataset:
+  name: torus2sphere
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/dg-mesh/torus2sphere/
+  mesh_path: /hdd/msj/dataset/dg-mesh/torus2sphere/mesh.ply
+  mesh_alpha: 100
+  resolution: 2
+model:
+  model_path: /hdd2/msj/outputs/torus2sphere
+optim:
+  batch_size: 1
+  opacity_reset_interval: 300000

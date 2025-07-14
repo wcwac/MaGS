@@ -1,0 +1,12 @@
+dataset:
+  name: bird
+  type: Blender
+  extension: .png
+  source_path: /hdd/msj/dataset/dg-mesh/bird/
+  mesh_path: /hdd/msj/dataset/dg-mesh/bird/mesh.ply
+  mesh_alpha: 100
+  resolution: 2
+model:
+  model_path: /hdd2/msj/outputs/bird
+optim:
+  batch_size: 2
