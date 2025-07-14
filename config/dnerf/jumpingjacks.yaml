@@ -2,11 +2,11 @@ dataset:
   name: jumpingjacks
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/jumpingjacks/
-  mesh_path: /hdd/msj/dataset/jumpingjacks/mesh.ply
+  source_path: dataset/dnerf/jumpingjacks/
+  mesh_path: dataset/dnerf/jumpingjacks/train_meshes/r_000.ply
   mesh_alpha: 50
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/jumpingjacks
+  model_path: outputs/jumpingjacks
 optim:
   batch_size: 2

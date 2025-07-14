@@ -2,11 +2,11 @@ dataset:
   name: hellwarrior
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/hellwarrior/
-  mesh_path: /hdd/msj/dataset/hellwarrior/mesh.ply
+  source_path: dataset/dnerf/hellwarrior/
+  mesh_path: dataset/dnerf/hellwarrior/train_meshes/r_000.ply
   mesh_alpha: 100
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/hellwarrior
+  model_path: outputs/hellwarrior
 optim:
   batch_size: 2

@@ -2,14 +2,14 @@ dataset:
   name: toby-sit
   type: Nerfies
   extension: .png
-  source_path: /hdd/msj/dataset/vrig/toby-sit/
-  mesh_path: /hdd/msj/dataset/vrig/toby-sit/mesh.ply
+  source_path: dataset/vrig/toby-sit/
+  mesh_path: dataset/vrig/toby-sit/mesh.ply
   mesh_alpha: 100
   resolution: 2
     white_background: false
   nerfies_type: vrig
 model:
-  model_path: /hdd2/msj/outputs/toby-sit
+  model_path: outputs/toby-sit
 optim:
   batch_size: 2
   opacity_reset_interval: 30000

@@ -7,7 +7,6 @@ import numpy as np
 import torch
 import torchvision
 
-from model.smplx_utils import smplx_utils
 from utils.camera_utils import camera_nerfies_from_JSON
 from utils.graphics_utils import (
     focal2fov,
@@ -161,6 +160,7 @@ def load_nerf_synthetic_camera_data(config, train=True) -> List[Camera]:
 
 
 def load_instant_avatar_data(config, train=True) -> List[Camera]:
+    from utils.smplx_utils import smplx_utils
     split = "train" if train else "test"
     source_path = config.dataset.source_path
     resolution = config.dataset.resolution

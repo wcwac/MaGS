@@ -2,12 +2,12 @@ dataset:
   name: torchocolate
   type: Nerfies
   extension: .png
-  source_path: /hdd/msj/dataset/interp/torchocolate
-  mesh_path: /hdd/msj/dataset/interp/torchocolate/mesh.ply
+  source_path: dataset/interp/torchocolate
+  mesh_path: dataset/interp/torchocolate/mesh.ply
   mesh_alpha: 100
   resolution: 2
   nerfies_type: interp
 model:
-  model_path: /hdd2/msj/outputs/torchocolate
+  model_path: outputs/torchocolate
 optim:
   opacity_reset_interval: 30000

@@ -2,11 +2,11 @@ dataset:
   name: horse
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/dg-mesh/horse/
-  mesh_path: /hdd/msj/dataset/dg-mesh/horse/mesh.ply
+  source_path: dataset/dg-mesh/horse/
+  mesh_path: dataset/dg-mesh/horse/train_meshes/r_000.ply
   mesh_alpha: 100
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/horse
+  model_path: outputs/horse
 optim:
   batch_size: 2

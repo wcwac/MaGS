@@ -2,11 +2,11 @@ dataset:
   name: mutant
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/mutant/
-  mesh_path: /hdd/msj/dataset/mutant/mesh.ply
+  source_path: dataset/dnerf/mutant/
+  mesh_path: dataset/dnerf/mutant/train_meshes/r_000.ply
   mesh_alpha: 40
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/mutant
+  model_path: outputs/mutant
 optim:
   batch_size: 2

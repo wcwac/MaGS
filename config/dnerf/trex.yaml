@@ -2,11 +2,11 @@ dataset:
   name: trex
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/trex/
-  mesh_path: /hdd/msj/dataset/trex/mesh.ply
+  source_path: dataset/dnerf/trex/
+  mesh_path: dataset/dnerf/trex/train_meshes/r_000.ply
   mesh_alpha: 50
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/trex
+  model_path: outputs/trex
 optim:
   batch_size: 2

@@ -2,12 +2,12 @@ dataset:
   name: male-4-casual
   type: InstantAvatar
   extension: .png
-  source_path: /hdd/msj/dataset/peoplesnapshot/male-4-casual/
-  mesh_path: /hdd/msj/dataset/peoplesnapshot/male-4-casual/mesh.ply
+  source_path: dataset/peoplesnapshot/male-4-casual/
+  mesh_path: dataset/peoplesnapshot/male-4-casual/mesh.ply
   mesh_alpha: 20
   resolution: 1
 model:
-  model_path: /hdd2/msj/outputs/male-4-casual
+  model_path: outputs/male-4-casual
 
 optim:
   batch_size: 5

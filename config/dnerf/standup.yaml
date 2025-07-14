@@ -2,11 +2,11 @@ dataset:
   name: standup
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/standup/
-  mesh_path: /hdd/msj/dataset/standup/mesh.ply
+  source_path: dataset/dnerf/standup/
+  mesh_path: dataset/dnerf/standup/train_meshes/r_000.ply
   mesh_alpha: 100
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/standup
+  model_path: outputs/standup
 optim:
   batch_size: 2

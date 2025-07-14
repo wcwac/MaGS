@@ -2,11 +2,11 @@ dataset:
   name: lego
   type: Blender
   extension: .png
-  source_path: /hdd/msj/dataset/lego/
-  mesh_path: /hdd/msj/dataset/lego/mesh.ply
+  source_path: dataset/dnerf/lego/
+  mesh_path: dataset/dnerf/lego/train_meshes/r_000.ply
   mesh_alpha: 30
   resolution: 2
 model:
-  model_path: /hdd2/msj/outputs/lego
+  model_path: outputs/lego
 optim:
   batch_size: 1
