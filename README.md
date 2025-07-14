@@ -13,9 +13,11 @@ If you find our work useful in your research, please consider citing:
 
 ```bibtex
 @article{mags2024,
-  title={Reconstructing and Simulating Dynamic 3D Objects with Mesh-adsorbed Gaussian Splatting},
-  author={Ma, Shaojie and Luo, Yawei and Yang, Yi},
-  journal={arXiv preprint arXiv:2406.01593},
+  title={MaGS: Reconstructing and Simulating Dynamic 3D Objects with Mesh-adsorbed Gaussian Splatting},
+  author={Shaojie Ma and Yawei Luo and Wei Yang and Yi Yang},
   year={2024},
+  eprint={2406.01593},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
   url={https://arxiv.org/abs/2406.01593}
 }
