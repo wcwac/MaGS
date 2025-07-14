@@ -212,8 +212,6 @@ def training(config):
                     iteration > config.optim.densify_from_iter
                     and iteration % config.optim.opacity_reset_interval == 0
                 ):
-                    if iteration <= config.optim.warm_up:
-                        gaussians.add_gaussians_to_empty_meshes()
                     gaussians.reset_opacity()
 
 
