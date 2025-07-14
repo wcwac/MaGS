@@ -80,7 +80,7 @@ def training(config):
     )
     gaussians.training_setup(config.optim)
     nerf_normalization = getNerfppNorm(train_dataset)
-    (nerf_normalization["radius"] if nerf_normalization["radius"] > 0 else 2.0)
+    cameras_extent = (nerf_normalization["radius"] if nerf_normalization["radius"] > 0 else 2.0)
 
     config.deform.control_points = train_dataset[0].mesh_vertices.shape[0]
     deformer = DeformModel(config.deform).cuda()
@@ -125,7 +125,7 @@ def training(config):
             iteration=iteration,
         )
         # image = render_pkg["render"]
-        image, _viewspace_point_tensor, _visibility_filter, _radii = (
+        image, viewspace_point_tensor, visibility_filter, radii = (
             render_pkg["render"],
             render_pkg["viewspace_points"],
             render_pkg["visibility_filter"],
@@ -186,27 +186,36 @@ def training(config):
                     writer,
                 )
 
-            # if iteration < config.optim.densify_until_iter:
-            #     gaussians.max_radii2D[visibility_filter] = torch.max(
-            #         gaussians.max_radii2D[visibility_filter], radii[visibility_filter]
-            #     )
-            #     gaussians.add_densification_stats(viewspace_point_tensor, visibility_filter, image.shape[2], image.shape[1])
 
-            # if (
-            #     iteration > config.optim.densify_from_iter
-            #     and iteration % config.optim.densification_interval == 0
-            # ):
-            #     size_threshold = (
-            #         config.optim.size_threshold
-            #         if iteration > config.optim.opacity_reset_interval
-            #         else None
-            #     )
-            #     gaussians.densify_and_prune(
-            #         config.optim.densify_grad_threshold,
-            #         config.optim.min_opacity,
-            #         cameras_extent,
-            #         size_threshold,
-            #     )
+            if iteration < config.optim.densify_until_iter:
+                gaussians.max_radii2D[visibility_filter] = torch.max(
+                    gaussians.max_radii2D[visibility_filter], radii[visibility_filter]
+                )
+
+                if (
+                    iteration > config.optim.densify_from_iter
+                    and iteration % config.optim.densification_interval == 0
+                ):
+                    size_threshold = (
+                        config.optim.size_threshold
+                        if iteration > config.optim.opacity_reset_interval
+                        else None
+                    )
+                    gaussians.densify_and_prune(
+                        config.optim.densify_grad_threshold,
+                        config.optim.min_opacity,
+                        cameras_extent,
+                        size_threshold,
+                    )
+
+                if (
+                    iteration > config.optim.densify_from_iter
+                    and iteration % config.optim.opacity_reset_interval == 0
+                ):
+                    if iteration <= config.optim.warm_up:
+                        gaussians.add_gaussians_to_empty_meshes()
+                    gaussians.reset_opacity()
+
 
             if iteration < config.optim.iterations:
                 gaussians.optimizer.step()
